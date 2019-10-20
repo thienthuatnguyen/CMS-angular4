@@ -1,0 +1,11 @@
+
+<form [formGroup]="form">
+    <input formControlName="first" placeholder="First">
+    <input formControlName="last" placeholder="Last">
+    <span *ngIf="form.hasError('required','last')">This field is required!</span>
+  <input formControlName="email" placeholder="Email">
+  <button (click)="saveUser(form.value)">Submit</button>
+</form>
+
+<!--<p>Value: {{ form.value | json }}</p>-->
+

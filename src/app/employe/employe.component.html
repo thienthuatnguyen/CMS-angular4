@@ -1,0 +1,4 @@
+<div *ngFor="let user of users">
+  <span>{{user.name}}</span>
+  <a  [routerLink] = "['/employe-detail',user.id]">show detail</a>
+</div>

@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://jsonplaceholder.typicode.com',
+  apiUrl1: 'https://5a62c4129e3dc40012d03246.mockapi.io/',
   apiAccessKey: '',
   apiAccessSecret: '',
   firebase: {

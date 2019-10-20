@@ -1,0 +1,80 @@
+$red-color: red;
+$white-color: white;
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  -ms-border-radius: $property;
+  border-radius: $property;
+}
+
+%flex-display {
+    display: flex;
+  }
+bar-rating {
+    .br {
+        margin: 0 !important;
+    }
+    .br-unit {
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+        background: url(../../assets//images/starBlack.svg);
+        &.br-selected {
+            background: url(../../assets//images/star.svg);
+        }
+        &.br-active {
+            background: url(../../assets//images/star.svg);
+        }
+    }
+}
+.wrapper {
+    .title {
+        text-align: center;
+        color: $red-color;
+        text-transform: uppercase;
+        padding: 60px 0;
+        font-size: 30px;
+    }
+}
+.row-item {
+    @extend %flex-display;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    
+    .col-item {
+        flex: 1 1 20%;
+        max-width: 20%;
+        padding: 0 5px;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+       
+        img {
+            max-width: 100%;
+            transition: all .2s ease-in-out;
+        }
+        .name {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .row-item {
+        .col-item {
+            min-width: 100%;
+        }
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .row-item {
+        .col-item {
+            min-width: 50%;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .row-item {
+        .col-item {
+            min-width: 33.3333%;
+        }
+    }
+}

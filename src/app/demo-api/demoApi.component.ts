@@ -26,8 +26,18 @@ export class DemoApiComponent implements OnInit {
       }
     });
   }
+  getUser() {
+    let self = this;
+    console.log(self.demoService.getDataUser());
+    self.demoService.getDataUser().subscribe((res: any) => {
+      if (res) {
+        console.log(res);
+      }
+    });
+  }
   ngOnInit() {
     let self = this;
     self.getData();
+    self.getUser();
   }
 }

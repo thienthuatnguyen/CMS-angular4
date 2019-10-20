@@ -1,1 +1,17 @@
+
 <a>This is home page</a>
+
+<span>{{value}}</span>
+<img [src]="value">
+<span [attr.st] = "value" [style.color]="glag?'white':'yellow'" >dada</span>
+<a (click) = "fc($event);">click me </a>
+<input type="text" [(ngModel)]="chang" placeholder="input text">
+<span>Name is</span>{{chang}}
+<span [class]="glag?'red':'white'">aaaaaaaa</span>
+<app-child [name]="title" (onvote)="parentvote($event)"></app-child>
+<!-- <app-child [name]="title" (onvote)="parentvote($event)"></app-child> -->
+
+<input type="text" #name_n (keyup)="update(name_n.value)">
+<span>agree {{agree}}</span>
+<span>no agree {{noagree}}</span>
+<a (click)="setname()" >set</a>

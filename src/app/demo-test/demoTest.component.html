@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="title">Please vote your images</div>
+  <div class="container">
+    <div class="row-item">
+      <div class="col-item" *ngFor="let data  of dataImages">
+        <div class="wrapper-info">
+          <div class="name">{{data.name}}</div>
+          <bar-rating [(rate)]="data.rated" [max]="5" (rateChange) = "onSelect(data.id, $event)"></bar-rating>
+          <button class="btn-unVote" (click)="unVoted(data.id)">UnVote</button>
+        </div>
+        <img src="{{data.imageUrl}}" alt='img' />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="title">your images voted: {{votedNum}}</div> -->
+
+</div>

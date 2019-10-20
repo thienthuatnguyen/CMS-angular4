@@ -15,6 +15,20 @@ import {BsDatepickerModule} from 'ngx-bootstrap';
 import {DemoApiComponent} from './demo-api/demoApi.component';
 import {DemoService} from './services/demo.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ChildComponent} from './child/child.component';
+import {ExponentialStrengthPipe} from './pipe/exponential-strength.pipe';
+import {NotFoundComponent} from './404/notFound.component';
+import {EmployeComponent} from './employe/employe.component';
+import {EmployeDetailComponent} from './employe-detail/employe-detail.component';
+import {EducationComponent} from './education/education.component';
+import {ExprienceComponent} from './exprience/exprience.component';
+import {EmployeEditComponent} from './employe-edit/employe-edit.component';
+import {  ReactiveFormsModule } from '@angular/forms';
+import { DemoTestComponent } from './demo-test/demoTest.component';
+import { BarRatingModule } from "ngx-bar-rating";
+import { DemoTestWinnerComponent } from './demo-test-winner/demoTestWinner.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +38,17 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
     DemoSwipperComponent,
     HomeComponent,
     DemoBootstrapComponent,
-    DemoApiComponent
+    DemoApiComponent,
+    ChildComponent,
+    ExponentialStrengthPipe,
+    NotFoundComponent,
+    EmployeComponent,
+    EmployeDetailComponent,
+    EducationComponent,
+    ExprienceComponent,
+    EmployeEditComponent,
+    DemoTestComponent,
+    DemoTestWinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +58,13 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     SwiperModule,
     BsDatepickerModule.forRoot(),
+    ReactiveFormsModule,
+    BarRatingModule
+
   ],
   providers: [
-    DemoService],
+    DemoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

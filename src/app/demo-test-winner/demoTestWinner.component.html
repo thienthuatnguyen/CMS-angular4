@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="title">Result</div>
+  <div class="container">
+    <div class="row-item">
+      <div class="col-item" *ngFor="let data  of dataImages">
+        <div class="name">{{data.name}}</div>
+        <img src="{{data.imageUrl}}" alt='img' />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="title">your images voted: {{votedNum}}</div> -->
+
+</div>
